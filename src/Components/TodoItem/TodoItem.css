@@ -1,0 +1,12 @@
+.todoItemWrapper {
+  background-color: lightgray;
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 6px;
+  margin: 8px;
+  color: red;
+}
+.todoItem {
+  font-size: 15px;
+}

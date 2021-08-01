@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import deleteicon from "./Icons/delete.png";
+import TodoItem from "./Components/TodoItem/TodoItem";
+import InputTodo from "./Components/InputTodo/InputTodo";
+import ChooseTasks from "./Components/ChooseTasks/ChooseTasks";
 
 function App() {
   const [myTasks, setMyTasks] = useState([]);
@@ -32,28 +34,7 @@ function App() {
   }
 
   const totalTodoItems = myTasks.map(function (item) {
-    return (
-      <div key={item.id} className="todoItemWrapper">
-        <div className="todoItem">{item.name}</div>
-        <div>
-          <input
-            type="checkbox"
-            onChange={function (event) {
-              checkboxChange(event, item.id);
-            }}
-            checked={item.completed}
-          ></input>
-          <div
-            onClick={function () {
-              onItemDeletion(item.id);
-            }}
-            style={{ display: "inline-block" }}
-          >
-            <img src={deleteicon} style={{ height: "20px" }} />
-          </div>{" "}
-        </div>
-      </div>
-    );
+    return TodoItem(item, checkboxChange, onItemDeletion);
   });
   function onRadioButtonChange(event) {
     setFilter(event.target.value);
@@ -73,28 +54,7 @@ function App() {
   });
 
   const completedTodoItems = x.map(function (item) {
-    return (
-      <div key={item.id} className="todoItemWrapper">
-        <div className="todoItem">{item.name}</div>
-        <div>
-          <input
-            type="checkbox"
-            onChange={function (event) {
-              checkboxChange(event, item.id);
-            }}
-            checked={item.completed}
-          ></input>
-          <div
-            onClick={function () {
-              onItemDeletion(item.id);
-            }}
-            style={{ display: "inline-block" }}
-          >
-            <img src={deleteicon} style={{ height: "20px" }} />
-          </div>{" "}
-        </div>
-      </div>
-    );
+    return TodoItem(item, checkboxChange, onItemDeletion);
   });
 
   const y = myTasks.filter(function (item) {
@@ -102,70 +62,34 @@ function App() {
   });
 
   const pendingTodoItems = y.map(function (item) {
-    return (
-      <div key={item.id} className="todoItemWrapper">
-        <div className="todoItem">{item.name}</div>
-        <div>
-          <input
-            type="checkbox"
-            onChange={function (event) {
-              checkboxChange(event, item.id);
-            }}
-            checked={item.completed}
-          ></input>
-          <div
-            onClick={function () {
-              onItemDeletion(item.id);
-            }}
-            style={{ display: "inline-block" }}
-          >
-            <img src={deleteicon} style={{ height: "20px" }} />
-          </div>{" "}
-        </div>
-      </div>
-    );
+    return TodoItem(item, checkboxChange, onItemDeletion);
   });
   // console.log(myTasks);
   return (
-    <div>
-      <input
-        value={inputText}
-        onChange={handleInputChange}
-        placeholder="Enter Your Tasks..."
-        className="inputTask"
-      ></input>
-      <button onClick={onAddTask} className="addButton">
-        Add
-      </button>
-      <div onChange={onRadioButtonChange}>
-        <input type="radio" value="A" checked={filter === "A"}></input>
-        <span>All Tasks</span>
-        <input type="radio" value="B" checked={filter === "B"}></input>
-        <span>Completed Tasks</span>
-        <input type="radio" value="C" checked={filter === "C"}></input>
-        <span>Pending Tasks</span>
-      </div>
-      <div className="RadioObjects">
-        <div
-          className="totalItems"
-          style={{ display: filter === "A" ? "block" : "none" }}
-        >
-          <div>Total List items:</div>
-          <div>{totalTodoItems}</div>
-        </div>
-        <div
-          className="completedItems"
-          style={{ display: filter === "B" ? "block" : "none" }}
-        >
-          <div>completed List items:</div>
-          <div>{completedTodoItems}</div>
-        </div>
-        <div
-          className="pendingItems"
-          style={{ display: filter === "C" ? "block" : "none" }}
-        >
-          <div>Pending List items:</div>
-          <div>{pendingTodoItems}</div>
+    <div className="completeTodo">
+      <div style={{ backgroundColor: "lightslategray" }}>
+        {InputTodo(inputText, handleInputChange, onAddTask)}
+        {ChooseTasks(onRadioButtonChange, filter)}
+
+        <div>
+          <div
+            className="totalItems"
+            style={{ display: filter === "A" ? "block" : "none" }}
+          >
+            <div>{totalTodoItems}</div>
+          </div>
+          <div
+            className="completedItems"
+            style={{ display: filter === "B" ? "block" : "none" }}
+          >
+            <div>{completedTodoItems}</div>
+          </div>
+          <div
+            className="pendingItems"
+            style={{ display: filter === "C" ? "block" : "none" }}
+          >
+            <div>{pendingTodoItems}</div>
+          </div>
         </div>
       </div>
     </div>

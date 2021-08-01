@@ -1,0 +1,16 @@
+.addButton {
+  width: 100px;
+  background-color: #4e9af1;
+  padding: 12px 6px;
+  margin: 8px;
+  border: 1px solid rgb(207, 182, 182);
+  border-radius: 2px solid rgb(207, 182, 182);
+  color: white;
+}
+.inputTask {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
