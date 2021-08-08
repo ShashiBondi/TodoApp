@@ -1,5 +1,5 @@
-import deleteicon from "../../Icons/delete.png";
 import "./TodoItem.css";
+import x from "../../Icons/delete.png";
 
 function TodoItem(item, checkboxChange, onItemDeletion) {
   return (
@@ -19,7 +19,7 @@ function TodoItem(item, checkboxChange, onItemDeletion) {
           }}
           style={{ display: "inline-block" }}
         >
-          <img src={deleteicon} style={{ height: "20px" }} />
+          <img src={x} style={{ height: "20px" }} />
         </div>{" "}
       </div>
     </div>

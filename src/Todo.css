@@ -1,0 +1,42 @@
+.inputTask {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px;
+  border: 1px solid rgb(7, 9, 136);
+  border-radius: 4px;
+}
+.addButton {
+  width: 100px;
+  background-color: #4e9af1;
+  padding: 12px 6px;
+  margin: 8px;
+  border: 1px solid rgb(207, 182, 182);
+  border-radius: 2px solid rgb(207, 182, 182);
+  color: white;
+}
+.todoItemWrapper {
+  background-color: rgba(211, 211, 211, 0.808);
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 6px;
+  margin: 8px;
+  color: rgba(9, 39, 78, 0.973);
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+input:focus {
+  outline: none !important;
+  border: 1px solid #4e9af1;
+  box-shadow: 0 0 2px #4e9af1;
+}
+.outerBox {
+  display: flex;
+  justify-content: center;
+  /* background-color: yellowgreen; */
+}
+.todoItem {
+  font-size: 20px;
+}
