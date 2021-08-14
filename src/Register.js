@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Auth, Db } from "./Config/fire";
+import "./Register.css";
 
 function Register(props) {
   const [Name, setName] = useState("");
@@ -40,16 +41,36 @@ function Register(props) {
       });
   }
   return (
-    <div>
-      <div>Register Here</div>
-      <div>Enter Your Name</div>
-      <input onChange={inputName} value={Name}></input>
-      <div>Enter Your Email</div>
-      <input onChange={inputEmail} value={Email}></input>
-      <div>Enter Your Password</div>
-      <input onChange={inputPassword} value={Password}></input>
-      <div>
-        <button onClick={buttonClick}>REGISTER</button>
+    <div className="registerPage">
+      <div className="registerButton">
+        <h2>Start Your Tasks by Registering</h2>
+        <div>Enter Your Name</div>
+        <input
+          onChange={inputName}
+          value={Name}
+          className="nameInput"
+          placeholder="Your Name"
+        ></input>
+        <div>Enter Your Email</div>
+        <input
+          onChange={inputEmail}
+          value={Email}
+          className="emailInput"
+          placeholder="Your Email"
+        ></input>
+        <div>Enter Your Password</div>
+        <input
+          onChange={inputPassword}
+          value={Password}
+          className="passwordInput"
+          type="password"
+          placeholder="Your Password"
+        ></input>
+        <div>
+          <button onClick={buttonClick} className="handleButton">
+            REGISTER
+          </button>
+        </div>
       </div>
     </div>
   );

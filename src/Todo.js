@@ -11,10 +11,21 @@ function Todo() {
   const [counter, setCounter] = useState(0);
   const [radioValue, setradioValue] = useState("1");
   const [userId, setUserId] = useState("");
+  const [userName, setUsername] = useState("");
+  //
 
   function handleAuthStateChange(x) {
-    console.log("Auth Staet Chenaged");
+    console.log("Auth Staet Chenaged", x.uid);
     setUserId(x.uid);
+    Db.collection("Users")
+      .doc(x.uid)
+      .get()
+      .then(function (response) {
+        setUsername(response.data().name);
+      })
+      .catch(function (errorResponse) {
+        console.log("Error Response");
+      });
     Db.collection("Todos")
       .doc(x.uid)
       .collection("Items")
@@ -121,6 +132,7 @@ function Todo() {
   return (
     <div className="outerBox">
       <div className="App">
+        <div>Welcome {userName} </div>
         <input
           className="inputTask"
           placeholder="Enter Your Tasks"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Auth } from "./Config/fire";
+import "./Login.css";
 
 function Login(props) {
   const [Email, setEmail] = useState("");
@@ -22,20 +23,36 @@ function Login(props) {
       });
   }
   return (
-    <div>
-      <div>LOGIN HERE</div>
-      <div>Enter Email</div>
-      <input onChange={inputEmail} value={Email}></input>
-      <div>Enter your Password</div>
-      <input onChange={inputPassword} value={Password}></input>
-      <div>
-        <button onClick={buttonClick}>LOGIN</button>
-      </div>
-      <div>
-        Don't have an account?{" "}
-        <Link to="/register">
-          <span>Create One</span>
-        </Link>
+    <div className="loginPage">
+      <div className="loginButton">
+        <h1>Loads Of Tasks To Accomplish!</h1>
+        {/* <div>LOGIN HERE</div> */}
+        <div>Enter Email</div>
+        <input
+          onChange={inputEmail}
+          value={Email}
+          className="emailInput"
+          placeholder="Your Email"
+        ></input>
+        <div>Enter your Password</div>
+        <input
+          onChange={inputPassword}
+          value={Password}
+          className="passwordInput"
+          type="password"
+          placeholder="Your Password"
+        ></input>
+        <div>
+          <button onClick={buttonClick} className="handleButton">
+            LOGIN
+          </button>
+        </div>
+        <div>
+          Don't have an account?{" "}
+          <Link to="/register">
+            <span>Create One</span>
+          </Link>
+        </div>
       </div>
     </div>
   );
