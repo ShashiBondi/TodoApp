@@ -1,0 +1,123 @@
+[debug] [2021-08-14T10:47:37.302Z] ----------------------------------------------------------------------
+[debug] [2021-08-14T10:47:37.305Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LENOVO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-08-14T10:47:37.306Z] CLI Version:   9.16.5
+[debug] [2021-08-14T10:47:37.306Z] Platform:      win32
+[debug] [2021-08-14T10:47:37.306Z] Node Version:  v14.17.4
+[debug] [2021-08-14T10:47:37.307Z] Time:          Sat Aug 14 2021 16:17:37 GMT+0530 (India Standard Time)
+[debug] [2021-08-14T10:47:37.307Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-14T10:47:37.318Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-14T10:47:37.318Z] > authorizing via signed-in user (bondishashank.nitt@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  I:\todo-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-08-14T10:48:44.466Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-08-14T10:48:45.144Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-08-14T10:48:45.145Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project todo-app-1e4f9 (Todo-App) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-08-14T10:49:20.737Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-08-14T10:49:20.865Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-08-14T10:49:20.865Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.9.1","browserURL":"https://www.gstatic.com/firebasejs/8.9.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.9.1/firebase.tgz"},"live":{"version":"8.9","browserURL":"https://www.gstatic.com/firebasejs/live/8.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.9/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/8.9.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.9.1/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.9.1/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.9.1/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.9.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.9.1/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at I:\todo-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=761873235&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-08-14T10:50:43.083Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"5cc02872c22935f2b977","redirect_uri":"http://localhost:9005","state":"761873235"}
+[debug] [2021-08-14T10:50:43.489Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sat, 14 Aug 2021 10:50:43 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"90b865a57dbe00dc203b1244e373053a\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com render-temp.githubusercontent.com viewscreen.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-3f088aa2.js gist.github.com/socket-worker-3f088aa2.js","x-github-request-id":"E96B:5B26:FD29D5:1175627:6117A003"}
+[debug] [2021-08-14T10:50:43.502Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-08-14T10:50:43.944Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-08-14T10:50:43.944Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ShashiBondi","id":83707127,"node_id":"MDQ6VXNlcjgzNzA3MTI3","avatar_url":"https://avatars.githubusercontent.com/u/83707127?v=4","gravatar_id":"","url":"https://api.github.com/users/ShashiBondi","html_url":"https://github.com/ShashiBondi","followers_url":"https://api.github.com/users/ShashiBondi/followers","following_url":"https://api.github.com/users/ShashiBondi/following{/other_user}","gists_url":"https://api.github.com/users/ShashiBondi/gists{/gist_id}","starred_url":"https://api.github.com/users/ShashiBondi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ShashiBondi/subscriptions","organizations_url":"https://api.github.com/users/ShashiBondi/orgs","repos_url":"https://api.github.com/users/ShashiBondi/repos","events_url":"https://api.github.com/users/ShashiBondi/events{/privacy}","received_events_url":"https://api.github.com/users/ShashiBondi/received_events","type":"User","site_admin":false,"name":"BONDI SHASHANK","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":0,"followers":0,"following":0,"created_at":"2021-05-05T12:16:30Z","updated_at":"2021-05-10T07:43:07Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":4,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as ShashiBondi 
+[info] 
+[debug] [2021-08-14T10:51:08.911Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2021-08-14T10:51:09.299Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2021-08-14T10:51:09.300Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-08-14T10:51:54.417Z] ----------------------------------------------------------------------
+[debug] [2021-08-14T10:51:54.421Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LENOVO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-08-14T10:51:54.422Z] CLI Version:   9.16.5
+[debug] [2021-08-14T10:51:54.422Z] Platform:      win32
+[debug] [2021-08-14T10:51:54.422Z] Node Version:  v14.17.4
+[debug] [2021-08-14T10:51:54.423Z] Time:          Sat Aug 14 2021 16:21:54 GMT+0530 (India Standard Time)
+[debug] [2021-08-14T10:51:54.424Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-14T10:51:54.433Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-14T10:51:54.433Z] > authorizing via signed-in user (bondishashank.nitt@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  I:\todo-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-08-14T10:52:31.926Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-08-14T10:52:32.459Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-08-14T10:52:32.459Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project todo-app-1e4f9 (Todo-App) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-08-14T10:55:18.457Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-08-14T10:55:18.581Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-08-14T10:55:18.581Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.9.1","browserURL":"https://www.gstatic.com/firebasejs/8.9.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.9.1/firebase.tgz"},"live":{"version":"8.9","browserURL":"https://www.gstatic.com/firebasejs/live/8.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.9/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/8.9.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.9.1/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.9.1/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.9.1/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.9.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.9.1/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.memory.js"}}
+[info] i  Skipping write of build/index.html 
+[info] 
+[info] i  Detected a .git folder at I:\todo-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=101627312&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-08-14T10:55:28.389Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"055656de83272ac73071","redirect_uri":"http://localhost:9005","state":"101627312"}
+[debug] [2021-08-14T10:55:28.830Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sat, 14 Aug 2021 10:55:28 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"4de37e12da327919f423d927cb1332b4\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com render-temp.githubusercontent.com viewscreen.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-3f088aa2.js gist.github.com/socket-worker-3f088aa2.js","x-github-request-id":"F25D:7283:F6DFC7:110DCBA:6117A120"}
+[debug] [2021-08-14T10:55:28.834Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-08-14T10:55:29.290Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-08-14T10:55:29.291Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ShashiBondi","id":83707127,"node_id":"MDQ6VXNlcjgzNzA3MTI3","avatar_url":"https://avatars.githubusercontent.com/u/83707127?v=4","gravatar_id":"","url":"https://api.github.com/users/ShashiBondi","html_url":"https://github.com/ShashiBondi","followers_url":"https://api.github.com/users/ShashiBondi/followers","following_url":"https://api.github.com/users/ShashiBondi/following{/other_user}","gists_url":"https://api.github.com/users/ShashiBondi/gists{/gist_id}","starred_url":"https://api.github.com/users/ShashiBondi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ShashiBondi/subscriptions","organizations_url":"https://api.github.com/users/ShashiBondi/orgs","repos_url":"https://api.github.com/users/ShashiBondi/repos","events_url":"https://api.github.com/users/ShashiBondi/events{/privacy}","received_events_url":"https://api.github.com/users/ShashiBondi/received_events","type":"User","site_admin":false,"name":"BONDI SHASHANK","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":10,"public_gists":0,"followers":0,"following":0,"created_at":"2021-05-05T12:16:30Z","updated_at":"2021-05-10T07:43:07Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":4,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as ShashiBondi 
+[info] 
